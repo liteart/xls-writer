@@ -1,11 +1,11 @@
 {
-    "name": "maxakawizard/xls-writer",
+    "name": "liteart/xls-writer",
     "description": "Port of PEAR Spreadsheet Excel Writer",
     "authors": [
         {
-            "email": "maxakawizard@gmail.com",
-            "name": "Max Grigorian",
-            "homepage": "https://github.com/MAXakaWIZARD",
+            "email": "simon.hugentobler@gmail.com",
+            "name": "Simon Hugentobler",
+            "homepage": "https://github.com/",
             "role": "Developer"
         }
     ],
