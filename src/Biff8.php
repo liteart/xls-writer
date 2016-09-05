@@ -15,7 +15,7 @@ class Biff8
      */
     const VERSION = 0x0600;
 
-    const MAX_ROWS = 16384;
+    const MAX_ROWS = 65536;
     const MAX_COLS = 256;
 
     const MAX_STR_LENGTH = 255;
