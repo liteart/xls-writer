@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Format
 {
     const BORDER_NONE = 0;
@@ -412,12 +414,12 @@ class Format
      *
      * @param int $angle The rotation angle for the text (clockwise). Possible
      * values are: 0, 90, 270 and -1 for stacking top-to-bottom.
-     * @throws \Exception
+     * @throws Exception
      */
     public function setTextRotation($angle)
     {
         if (!isset($this->rotationMap[$angle])) {
-            throw new \Exception(
+            throw new Exception(
                 "Invalid value for angle." .
                 " Possible values are: 0, 90, 270 and -1 " .
                 "for stacking top-to-bottom."

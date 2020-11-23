@@ -2,6 +2,8 @@
 
 namespace Xls\OLE;
 
+use Exception;
+
 class PpsRoot extends PPS
 {
     /**
@@ -45,7 +47,7 @@ class PpsRoot extends PPS
      *
      * @param string $filename The name of the file where to save the OLE container
      * @return bool
-     *@throws \Exception
+     *@throws Exception
      */
     public function save($filename)
     {
@@ -80,13 +82,13 @@ class PpsRoot extends PPS
     /**
      * @param $filename
      *
-     * @throws \Exception
+     * @throws Exception
      */
     protected function openFile($filename)
     {
         $this->rootFilePointer = @fopen($filename, "wb");
         if ($this->rootFilePointer === false) {
-            throw new \Exception("Can't open $filename. It may be in use or protected.");
+            throw new Exception("Can't open $filename. It may be in use or protected.");
         }
     }
 

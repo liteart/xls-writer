@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Functions
 {
     /**
@@ -13,7 +15,7 @@ class Functions
      * @param $function
      *
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getFunction($function)
     {
@@ -25,14 +27,14 @@ class Functions
             return self::$functions[$function];
         }
 
-        throw new \Exception("Function $function() doesn't exist");
+        throw new Exception("Function $function() doesn't exist");
     }
 
     /**
      * @param $function
      *
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getArgsNumber($function)
     {

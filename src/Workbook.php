@@ -1,6 +1,7 @@
 <?php
 namespace Xls;
 
+use Exception;
 use Xls\OLE\PpsFile;
 use Xls\OLE\PpsRoot;
 
@@ -146,16 +147,16 @@ class Workbook extends BIFFwriter
      *
      * @param string $filePath File path to save
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function save($filePath)
     {
         if ($this->saved) {
-            throw new \Exception('Workbook was already saved!');
+            throw new Exception('Workbook was already saved!');
         }
 
         if (count($this->worksheets) == 0) {
-            throw new \Exception('Cannot save workbook with no sheets');
+            throw new Exception('Cannot save workbook with no sheets');
         }
 
         $this->appendRecord('Bof', array(static::BOF_TYPE));
@@ -293,7 +294,7 @@ class Workbook extends BIFFwriter
      * $i in [1..].
      *
      * @param string $name the optional name of the worksheet
-     * @throws \Exception
+     * @throws Exception
      * @return Worksheet
      */
     public function addWorksheet($name = '')
@@ -307,7 +308,7 @@ class Workbook extends BIFFwriter
         $this->checkSheetName($name);
 
         if ($this->hasSheet($name)) {
-            throw new \Exception("Worksheet '$name' already exists");
+            throw new Exception("Worksheet '$name' already exists");
         }
 
         $worksheet = new Worksheet(
@@ -337,13 +338,13 @@ class Workbook extends BIFFwriter
      * @param string $name
      *
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
     protected function checkSheetName($name)
     {
         $maxLen = Biff8::MAX_SHEET_NAME_LENGTH;
         if (strlen($name) > $maxLen) {
-            throw new \Exception(
+            throw new Exception(
                 "Sheet name must be shorter than $maxLen chars"
             );
         }
@@ -432,7 +433,7 @@ class Workbook extends BIFFwriter
      * @param int $green green RGB value [0-255]
      * @param int $blue  blue RGB value [0-255]
      * @return int The palette index for the custom color
-     *@throws \Exception
+     *@throws Exception
      *
      */
     public function setCustomColor($index, $red, $green, $blue)

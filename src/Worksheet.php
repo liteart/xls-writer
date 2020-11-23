@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Worksheet extends BIFFwriter
 {
     const BOF_TYPE = 0x0010;
@@ -519,7 +521,7 @@ class Worksheet extends BIFFwriter
      * @param int $col    The first col (leftmost col) we are writing to
      * @param array $val    The array of values to write
      * @param mixed $format The optional format to apply to the cell
-     * @throws \Exception
+     * @throws Exception
      */
     public function writeRow($row, $col, $val, $format = null)
     {
@@ -533,7 +535,7 @@ class Worksheet extends BIFFwriter
                 $col++;
             }
         } else {
-            throw new \Exception('$val needs to be an array');
+            throw new Exception('$val needs to be an array');
         }
     }
 
@@ -543,7 +545,7 @@ class Worksheet extends BIFFwriter
      * @param int $col    The col we are writing to
      * @param array $val    The array of values to write
      * @param mixed $format The optional format to apply to the cell
-     * @throws \Exception
+     * @throws Exception
      */
     public function writeCol($row, $col, $val, $format = null)
     {
@@ -553,7 +555,7 @@ class Worksheet extends BIFFwriter
                 $row++;
             }
         } else {
-            throw new \Exception('$val needs to be an array');
+            throw new Exception('$val needs to be an array');
         }
     }
 
@@ -705,7 +707,7 @@ class Worksheet extends BIFFwriter
      * @param int $row    Zero indexed row
      * @param int $col    Zero indexed column
      * @param mixed $format The XF format
-     * @throws \Exception
+     * @throws Exception
      */
     public function writeBlank($row, $col, $format = null)
     {
@@ -728,7 +730,7 @@ class Worksheet extends BIFFwriter
      * @param int $col     Zero indexed column
      * @param string $formula The formula text string
      * @param mixed $format  The optional XF format
-     * @throws \Exception
+     * @throws Exception
      */
     public function writeFormula($row, $col, $formula, $format = null)
     {
@@ -738,7 +740,7 @@ class Worksheet extends BIFFwriter
         if (in_array($formula[0], array('=', '@'), true)) {
             $formula = substr($formula, 1);
         } else {
-            throw new \Exception('Invalid formula: should start with = or @');
+            throw new Exception('Invalid formula: should start with = or @');
         }
 
         $formula = $this->formulaParser->getReversePolish($formula);
@@ -1072,7 +1074,7 @@ class Worksheet extends BIFFwriter
      * @param int $y1        Distance to top of object
      * @param int $width     Width of image frame
      * @param int $height    Height of image frame
-     * @throws \Exception
+     * @throws Exception
      */
     protected function positionImage($colStart, $rowStart, $x1, $y1, $width, $height)
     {
@@ -1114,7 +1116,7 @@ class Worksheet extends BIFFwriter
             || $rowStartSize == 0
             || $rowEndSize == 0
         ) {
-            throw new \Exception('Bitmap isn\'t allowed to start or finish in a hidden cell');
+            throw new Exception('Bitmap isn\'t allowed to start or finish in a hidden cell');
         }
 
         // Convert the pixel values to the percentage value expected by Excel
@@ -1336,13 +1338,13 @@ class Worksheet extends BIFFwriter
      * @param int $percents The zoom factor
      *
      * @return Worksheet
-     *@throws \Exception
+     *@throws Exception
      */
     public function setZoom($percents = 100)
     {
         // Confine the scale to Excel's range
         if ($percents < 10 || $percents > 400) {
-            throw new \Exception("Zoom factor $percents outside range: 10 <= zoom <= 400");
+            throw new Exception("Zoom factor $percents outside range: 10 <= zoom <= 400");
         }
 
         $this->zoom = floor($percents);

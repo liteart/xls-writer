@@ -1,6 +1,8 @@
 <?php
 namespace Xls\Record;
 
+use Exception;
+
 class Formula extends AbstractRecord
 {
     const NAME = 'FORMULA';
@@ -13,7 +15,7 @@ class Formula extends AbstractRecord
      * @param $format
      *
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
     public function getData($row, $col, $formula, $format)
     {

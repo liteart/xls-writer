@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 /**
  * Class PrintSetup
  * Contains print-related functionality for each Worksheet
@@ -224,13 +226,13 @@ class PrintSetup
      * @param int $scale The optional scale factor. Defaults to 100
      *
      * @return PrintSetup
-     *@throws \Exception
+     *@throws Exception
      */
     public function setPrintScale($scale = 100)
     {
         // Confine the scale to Excel's range
         if ($scale < 10 || $scale > 400) {
-            throw new \Exception("Print scale $scale outside range: 10 <= scale <= 400");
+            throw new Exception("Print scale $scale outside range: 10 <= scale <= 400");
         }
 
         // Turn off "fit to page" option

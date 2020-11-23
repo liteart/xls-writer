@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Palette
 {
     protected static $colorsMap = array(
@@ -99,13 +101,13 @@ class Palette
      * @param $green
      * @param $blue
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public static function validateColor($index, $red, $green, $blue)
     {
         // Check that the colour index is the right range
         if ($index < 8 || $index > 64) {
-            throw new \Exception("Color index $index outside range: 8 <= index <= 64");
+            throw new Exception("Color index $index outside range: 8 <= index <= 64");
         }
 
         // Check that the colour components are in the right range
@@ -113,7 +115,7 @@ class Palette
             || ($green < 0 || $green > 255)
             || ($blue < 0 || $blue > 255)
         ) {
-            throw new \Exception("Color component outside range: 0 <= color <= 255");
+            throw new Exception("Color component outside range: 0 <= color <= 255");
         }
     }
 

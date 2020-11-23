@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Cell
 {
     protected $row;
@@ -15,7 +17,7 @@ class Cell
      * @param bool $rowRel
      * @param bool $colRel
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct($row, $col, $rowRel = true, $colRel = true)
     {
@@ -60,7 +62,7 @@ class Cell
      * Utility function for writing formulas
      * Converts a cell's coordinates to the A1 format.
      *
-     * @throws \Exception
+     * @throws Exception
      * @return string The cell identifier in A1 format
      */
     public function getAddress()
@@ -114,24 +116,24 @@ class Cell
     /**
      * @param $row
      *
-     * @throws \Exception
+     * @throws Exception
      */
     protected function validateRowIndex($row)
     {
         if ($row > Biff8::MAX_ROW_IDX) {
-            throw new \Exception('Row index is beyond max row number');
+            throw new Exception('Row index is beyond max row number');
         }
     }
 
     /**
      * @param $col
      *
-     * @throws \Exception
+     * @throws Exception
      */
     protected function validateColIndex($col)
     {
         if ($col > Biff8::MAX_COL_IDX) {
-            throw new \Exception('Col index is beyond max col number');
+            throw new Exception('Col index is beyond max col number');
         }
     }
 

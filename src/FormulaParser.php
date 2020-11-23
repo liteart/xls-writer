@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class FormulaParser
 {
     /**
@@ -51,7 +53,7 @@ class FormulaParser
      *
      * @param mixed $token The token to convert.
      * @return string the converted token
-     * @throws \Exception
+     * @throws Exception
      */
     protected function convert($token)
     {
@@ -75,7 +77,7 @@ class FormulaParser
             return '';
         }
 
-        throw new \Exception("Unknown token $token");
+        throw new Exception("Unknown token $token");
     }
 
     /**
@@ -99,7 +101,7 @@ class FormulaParser
      * Convert a string token to ptgStr
      *
      * @param string $string A string for conversion to its ptg value.
-     * @throws \Exception
+     * @throws Exception
      * @return string the converted token
      */
     protected function convertString($string)
@@ -107,7 +109,7 @@ class FormulaParser
         // chop away beggining and ending quotes
         $string = substr($string, 1, strlen($string) - 2);
         if (strlen($string) > Biff8::MAX_STR_LENGTH) {
-            throw new \Exception("String is too long");
+            throw new Exception("String is too long");
         }
 
         $encoding = 0;
@@ -240,7 +242,7 @@ class FormulaParser
      * @param $extRef
      *
      * @return array
-     * @throws \Exception
+     * @throws Exception
      */
     protected function getRangeSheets($extRef)
     {
@@ -252,12 +254,12 @@ class FormulaParser
 
             $sheet1 = $this->getSheetIndex($sheetName1);
             if ($sheet1 == -1) {
-                throw new \Exception("Unknown sheet name $sheetName1 in formula");
+                throw new Exception("Unknown sheet name $sheetName1 in formula");
             }
 
             $sheet2 = $this->getSheetIndex($sheetName2);
             if ($sheet2 == -1) {
-                throw new \Exception("Unknown sheet name $sheetName2 in formula");
+                throw new Exception("Unknown sheet name $sheetName2 in formula");
             }
 
             // Reverse max and min sheet numbers if necessary
@@ -267,7 +269,7 @@ class FormulaParser
         } else { // Single sheet name only.
             $sheet1 = $this->getSheetIndex($extRef);
             if ($sheet1 == -1) {
-                throw new \Exception("Unknown sheet name $extRef in formula");
+                throw new Exception("Unknown sheet name $extRef in formula");
             }
             $sheet2 = $sheet1;
         }
@@ -282,7 +284,7 @@ class FormulaParser
      *
      * @param string $extRef The name of the external reference
      *
-     * @throws \Exception
+     * @throws Exception
      * @return string The reference index in packed() format
      */
     protected function getRefIndex($extRef)
@@ -354,7 +356,7 @@ class FormulaParser
      *
      * @param string $cellAddress The Excel cell reference to be packed
      *
-     * @throws \Exception
+     * @throws Exception
      * @return array Array containing the row and column in packed() format
      */
     protected function cellToPackedRowcol($cellAddress)
@@ -658,7 +660,7 @@ class FormulaParser
      *       | CellRange
      *       | Number
      *       | Function
-     * @throws \Exception
+     * @throws Exception
      * @return array The parsed ptg'd tree
      */
     protected function fact()
@@ -668,7 +670,7 @@ class FormulaParser
 
             $result = $this->parenthesizedExpression();
             if ($this->currentToken != Token::TOKEN_CLOSE) {
-                throw new \Exception("')' token expected.");
+                throw new Exception("')' token expected.");
             }
 
             $this->advance(); // eat the ")"
@@ -697,7 +699,7 @@ class FormulaParser
             return $result;
         }
 
-        throw new \Exception(
+        throw new Exception(
             "Syntax error: " . $this->currentToken .
             ", lookahead: " . $this->lookahead .
             ", current char: " . $this->currentChar
@@ -707,7 +709,7 @@ class FormulaParser
     /**
      * It parses a function call. It assumes the following rule:
      * Func -> ( Expr [,Expr]* )
-     * @throws \Exception
+     * @throws Exception
      * @return string|array The parsed ptg'd tree
      */
     protected function func()
@@ -722,7 +724,7 @@ class FormulaParser
         while ($this->currentToken != ')') {
             if ($numArgs > 0) {
                 if (!Token::isCommaOrSemicolon($this->currentToken)) {
-                    throw new \Exception(
+                    throw new Exception(
                         "Syntax error: comma expected in " .
                         "function $function, arg #{$numArgs}"
                     );
@@ -741,7 +743,7 @@ class FormulaParser
         $args = Functions::getArgsNumber($function);
         if ($args >= 0 && $args != $numArgs) {
             // If fixed number of args eg. TIME($i,$j,$k). Check that the number of args is valid.
-            throw new \Exception("Incorrect number of arguments in function $function() ");
+            throw new Exception("Incorrect number of arguments in function $function() ");
         }
 
         $result = $this->createTree($function, $result, $numArgs);
@@ -849,7 +851,7 @@ class FormulaParser
      * @param $part
      *
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
     protected function getTreePartPolish($part)
     {
