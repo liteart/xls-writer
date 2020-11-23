@@ -4,22 +4,22 @@ namespace Xls;
 
 class Token
 {
-    const TOKEN_ADD = "+";
-    const TOKEN_SUB = "-";
-    const TOKEN_MUL = "*";
-    const TOKEN_DIV = "/";
-    const TOKEN_OPEN = "(";
-    const TOKEN_CLOSE = ")";
-    const TOKEN_COMA = ",";
-    const TOKEN_SEMICOLON = ";";
-    const TOKEN_GT = ">";
-    const TOKEN_LT = "<";
-    const TOKEN_LE = "<=";
-    const TOKEN_GE = ">=";
-    const TOKEN_EQ = "=";
-    const TOKEN_NE = "<>";
-    const TOKEN_CONCAT = "&";
-    const TOKEN_ARG = "arg";
+    public const TOKEN_ADD = "+";
+    public const TOKEN_SUB = "-";
+    public const TOKEN_MUL = "*";
+    public const TOKEN_DIV = "/";
+    public const TOKEN_OPEN = "(";
+    public const TOKEN_CLOSE = ")";
+    public const TOKEN_COMA = ",";
+    public const TOKEN_SEMICOLON = ";";
+    public const TOKEN_GT = ">";
+    public const TOKEN_LT = "<";
+    public const TOKEN_LE = "<=";
+    public const TOKEN_GE = ">=";
+    public const TOKEN_EQ = "=";
+    public const TOKEN_NE = "<>";
+    public const TOKEN_CONCAT = "&";
+    public const TOKEN_ARG = "arg";
 
     protected static $ptgMap = array(
         self::TOKEN_MUL => 'ptgMul',

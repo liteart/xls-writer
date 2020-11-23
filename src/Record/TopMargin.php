@@ -4,6 +4,6 @@ namespace Xls\Record;
 
 class TopMargin extends LeftMargin
 {
-    const NAME = 'TOPMARGIN';
-    const ID = 0x28;
+    public const NAME = 'TOPMARGIN';
+    public const ID = 0x28;
 }

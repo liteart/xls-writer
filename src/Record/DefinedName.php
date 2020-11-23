@@ -5,11 +5,11 @@ use Xls\StringUtils;
 
 class DefinedName extends AbstractRecord
 {
-    const NAME = 'DEFINEDNAME';
-    const ID = 0x18;
+    public const NAME = 'DEFINEDNAME';
+    public const ID = 0x18;
 
-    const BUILTIN_PRINT_AREA = 0x06;
-    const BUILTIN_PRINT_TITLES = 0x07;
+    public const BUILTIN_PRINT_AREA = 0x06;
+    public const BUILTIN_PRINT_TITLES = 0x07;
 
     /**
      * @param $type

@@ -5,8 +5,8 @@ use Xls\Range;
 
 class Dimensions extends AbstractRecord
 {
-    const NAME = 'DIMENSIONS';
-    const ID = 0x0200;
+    public const NAME = 'DIMENSIONS';
+    public const ID = 0x0200;
 
     /**
      * @param Range $range

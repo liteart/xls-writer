@@ -4,6 +4,6 @@ namespace Xls\Record;
 
 class Footer extends Header
 {
-    const NAME = 'FOOTER';
-    const ID = 0x0015;
+    public const NAME = 'FOOTER';
+    public const ID = 0x0015;
 }

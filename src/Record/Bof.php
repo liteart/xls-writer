@@ -5,8 +5,8 @@ use Xls\Biff8;
 
 class Bof extends AbstractRecord
 {
-    const NAME = 'BOF';
-    const ID = 0x0809;
+    public const NAME = 'BOF';
+    public const ID = 0x0809;
 
     /**
      * Generate BOF record to indicate the beginning of a stream or

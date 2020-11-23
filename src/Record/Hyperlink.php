@@ -6,10 +6,10 @@ use Xls\Range;
 
 class Hyperlink extends AbstractRecord
 {
-    const NAME = 'HYPERLINK';
-    const ID = 0x01B8;
-    const STDLINK_GUID = "D0C9EA79F9BACE118C8200AA004BA90B";
-    const MONIKER_GUID = "E0C9EA79F9BACE118C8200AA004BA90B";
+    public const NAME = 'HYPERLINK';
+    public const ID = 0x01B8;
+    public const STDLINK_GUID = "D0C9EA79F9BACE118C8200AA004BA90B";
+    public const MONIKER_GUID = "E0C9EA79F9BACE118C8200AA004BA90B";
 
     /**
      * @param Range $range

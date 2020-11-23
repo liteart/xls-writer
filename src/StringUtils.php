@@ -3,7 +3,7 @@ namespace Xls;
 
 class StringUtils
 {
-    const STRING_REGEXP_FRACTION = '(-?)(\d+)\s+(\d+\/\d+)';
+    public const STRING_REGEXP_FRACTION = '(-?)(\d+)\s+(\d+\/\d+)';
 
     /**
      * Get whether mbstring extension is available

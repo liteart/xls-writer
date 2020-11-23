@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Codepage extends AbstractRecord
 {
-    const NAME = 'CODEPAGE';
-    const ID = 0x0042;
+    public const NAME = 'CODEPAGE';
+    public const ID = 0x0042;
 
     /**
      * Generate the CODEPAGE biff record

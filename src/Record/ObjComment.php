@@ -4,7 +4,7 @@ namespace Xls\Record;
 
 class ObjComment extends Obj
 {
-    const TYPE = 0x19;
+    public const TYPE = 0x19;
 
     /**
      * @param int $objId

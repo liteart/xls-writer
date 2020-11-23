@@ -6,8 +6,8 @@ use Xls\Biff8;
 
 class ContinueRecord extends AbstractRecord
 {
-    const NAME = 'CONTINUE';
-    const ID = 0x003C;
+    public const NAME = 'CONTINUE';
+    public const ID = 0x003C;
 
     /**
      * Excel limits the size of BIFF records. In Excel 97 the limit is 8228 bytes.

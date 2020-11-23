@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Password extends AbstractRecord
 {
-    const NAME = 'PASSWORD';
-    const ID = 0x0013;
+    public const NAME = 'PASSWORD';
+    public const ID = 0x0013;
 
     /**
      * Generate the PASSWORD biff record

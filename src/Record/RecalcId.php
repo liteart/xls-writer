@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class RecalcId extends AbstractRecord
 {
-    const NAME = 'RECALCID';
-    const ID = 0x01C1;
+    public const NAME = 'RECALCID';
+    public const ID = 0x01C1;
 
     /**
      *

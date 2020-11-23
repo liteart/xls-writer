@@ -4,27 +4,27 @@ namespace Xls;
 
 class Validator
 {
-    const OP_BETWEEN = 0x00;
-    const OP_NOTBETWEEN = 0x01;
-    const OP_EQUAL = 0x02;
-    const OP_NOTEQUAL = 0x03;
-    const OP_GT = 0x04;
-    const OP_LT = 0x05;
-    const OP_GTE = 0x06;
-    const OP_LTE = 0x07;
+    public const OP_BETWEEN = 0x00;
+    public const OP_NOTBETWEEN = 0x01;
+    public const OP_EQUAL = 0x02;
+    public const OP_NOTEQUAL = 0x03;
+    public const OP_GT = 0x04;
+    public const OP_LT = 0x05;
+    public const OP_GTE = 0x06;
+    public const OP_LTE = 0x07;
 
-    const TYPE_ANY = 0x00;
-    const TYPE_INTEGER = 0x01;
-    const TYPE_DECIMAL = 0x02;
-    const TYPE_USER_LIST = 0x03;
-    const TYPE_DATE = 0x04;
-    const TYPE_TIME = 0x05;
-    const TYPE_TEXT_LENGTH = 0x06;
-    const TYPE_FORMULA = 0x07;
+    public const TYPE_ANY = 0x00;
+    public const TYPE_INTEGER = 0x01;
+    public const TYPE_DECIMAL = 0x02;
+    public const TYPE_USER_LIST = 0x03;
+    public const TYPE_DATE = 0x04;
+    public const TYPE_TIME = 0x05;
+    public const TYPE_TEXT_LENGTH = 0x06;
+    public const TYPE_FORMULA = 0x07;
 
-    const ERROR_STOP = 0x00;
-    const ERROR_WARNING = 0x01;
-    const ERROR_INFO = 0x02;
+    public const ERROR_STOP = 0x00;
+    public const ERROR_WARNING = 0x01;
+    public const ERROR_INFO = 0x02;
 
     protected $dataType = self::TYPE_INTEGER;
     protected $errorStyle = self::ERROR_STOP;

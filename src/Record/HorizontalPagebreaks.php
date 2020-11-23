@@ -3,9 +3,9 @@ namespace Xls\Record;
 
 class HorizontalPagebreaks extends AbstractRecord
 {
-    const NAME = 'HORIZONTALPAGEBREAKS';
-    const ID = 0x001B;
-    const COUNT_LIMIT = 0;
+    public const NAME = 'HORIZONTALPAGEBREAKS';
+    public const ID = 0x001B;
+    public const COUNT_LIMIT = 0;
 
     /**
      * @param array $breaks

@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class MsoDrawingGroup extends AbstractRecord
 {
-    const NAME = 'MSODRAWINGGROUP';
-    const ID = 0x00EB;
+    public const NAME = 'MSODRAWINGGROUP';
+    public const ID = 0x00EB;
 
     public function getData($hexStrData)
     {

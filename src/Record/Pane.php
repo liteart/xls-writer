@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Pane extends AbstractRecord
 {
-    const NAME = 'PANE';
-    const ID = 0x0041;
+    public const NAME = 'PANE';
+    public const ID = 0x0041;
 
     /**
      * @param $x

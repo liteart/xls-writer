@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class ExternalBook extends AbstractRecord
 {
-    const NAME = 'EXTERNALBOOK';
-    const ID = 0x01AE;
+    public const NAME = 'EXTERNALBOOK';
+    public const ID = 0x01AE;
 
     /**
      * Generate Internal SUPBOOK record

@@ -6,13 +6,13 @@ use Exception;
 
 class Worksheet extends BIFFwriter
 {
-    const BOF_TYPE = 0x0010;
+    public const BOF_TYPE = 0x0010;
 
-    const STATE_VISIBLE = 0x00;
-    const STATE_HIDDEN = 0x01;
-    const STATE_VERYHIDDEN = 0x02;
+    public const STATE_VISIBLE = 0x00;
+    public const STATE_HIDDEN = 0x01;
+    public const STATE_VERYHIDDEN = 0x02;
 
-    const TYPE_SHEET = 0x00;
+    public const TYPE_SHEET = 0x00;
 
     /**
      * Name of the Worksheet

@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Hcenter extends AbstractRecord
 {
-    const NAME = 'HCENTER';
-    const ID = 0x0083;
+    public const NAME = 'HCENTER';
+    public const ID = 0x0083;
 
     /**
      * @param $centering

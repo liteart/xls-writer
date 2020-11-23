@@ -5,8 +5,8 @@ use Xls\Worksheet;
 
 class Window2 extends AbstractRecord
 {
-    const NAME = 'WINDOW2';
-    const ID = 0x023E;
+    public const NAME = 'WINDOW2';
+    public const ID = 0x023E;
 
     /**
      * @param Worksheet $worksheet

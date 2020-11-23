@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class PrintHeaders extends AbstractRecord
 {
-    const NAME = 'PRINTHEADERS';
-    const ID = 0x2A;
+    public const NAME = 'PRINTHEADERS';
+    public const ID = 0x2A;
 
     /**
      * @param $printRowColHeaders

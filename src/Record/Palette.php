@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Palette extends AbstractRecord
 {
-    const NAME = 'PALETTE';
-    const ID = 0x0092;
+    public const NAME = 'PALETTE';
+    public const ID = 0x0092;
 
     /**
      * Write the PALETTE biff record

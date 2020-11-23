@@ -6,8 +6,8 @@ use Xls\NumberFormat;
 
 class Xf extends AbstractRecord
 {
-    const NAME = 'XF';
-    const ID = 0x00E0;
+    public const NAME = 'XF';
+    public const ID = 0x00E0;
 
     /**
      * Generate an Excel BIFF XF record.

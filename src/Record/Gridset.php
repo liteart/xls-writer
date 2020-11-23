@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Gridset extends AbstractRecord
 {
-    const NAME = 'GRIDSET';
-    const ID = 0x82;
+    public const NAME = 'GRIDSET';
+    public const ID = 0x82;
 
     /**
      * @param $gridsetVisible

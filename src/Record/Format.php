@@ -5,8 +5,8 @@ use Xls\StringUtils;
 
 class Format extends AbstractRecord
 {
-    const NAME = 'FORMAT';
-    const ID = 0x041E;
+    public const NAME = 'FORMAT';
+    public const ID = 0x041E;
 
     /**
      * Generate FORMAT record for non "built-in" numerical formats.

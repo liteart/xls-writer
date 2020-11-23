@@ -11,10 +11,10 @@ use Xls\OLE\PpsRoot;
 
 class Workbook extends BIFFwriter
 {
-    const COUNTRY_NONE = -1;
-    const COUNTRY_USA = 1;
+    public const COUNTRY_NONE = -1;
+    public const COUNTRY_USA = 1;
 
-    const BOF_TYPE = 0x0005;
+    public const BOF_TYPE = 0x0005;
 
     /**
      * Formula parser

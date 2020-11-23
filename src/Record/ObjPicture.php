@@ -7,7 +7,7 @@ use Xls\Margin;
 
 class ObjPicture extends Obj
 {
-    const TYPE = 0x08;
+    public const TYPE = 0x08;
 
     /**
      * Generate the OBJ record that precedes an IMDATA record. This could be generalise

@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class PrintGridLines extends AbstractRecord
 {
-    const NAME = 'PRINTGRIDLINES';
-    const ID = 0x2B;
+    public const NAME = 'PRINTGRIDLINES';
+    public const ID = 0x2B;
 
     /**
      * @param $printGridLines

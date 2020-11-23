@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Externsheet extends AbstractRecord
 {
-    const NAME = 'EXTERNSHEET';
-    const ID = 0x0017;
+    public const NAME = 'EXTERNSHEET';
+    public const ID = 0x0017;
 
     /**
      * @param $refs

@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Defcolwidth extends AbstractRecord
 {
-    const NAME = 'DEFCOLWIDTH';
-    const ID = 0x0055;
+    public const NAME = 'DEFCOLWIDTH';
+    public const ID = 0x0055;
 
     /**
      * Generate the DEFCOLWIDTH record

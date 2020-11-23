@@ -5,7 +5,7 @@ use Exception;
 
 class Bitmap
 {
-    const HEADER_SIZE = 0x36;
+    public const HEADER_SIZE = 0x36;
 
     /**
      * @var string

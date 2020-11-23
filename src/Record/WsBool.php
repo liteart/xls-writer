@@ -5,8 +5,8 @@ use Xls\Worksheet;
 
 class WsBool extends AbstractRecord
 {
-    const NAME = 'WSBOOL';
-    const ID = 0x0081;
+    public const NAME = 'WSBOOL';
+    public const ID = 0x0081;
 
     /**
      * Generate the WSBOOL biff record

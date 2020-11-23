@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class DataValidations extends AbstractRecord
 {
-    const NAME = 'DATAVALIDATIONS';
-    const ID = 0x01B2;
+    public const NAME = 'DATAVALIDATIONS';
+    public const ID = 0x01B2;
 
     /**
      * Generate the DVAL biff record

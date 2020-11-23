@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Guts extends AbstractRecord
 {
-    const NAME = 'GUTS';
-    const ID = 0x0080;
+    public const NAME = 'GUTS';
+    public const ID = 0x0080;
 
     /**
      * Generate the GUTS BIFF record. This is used to configure the gutter margins

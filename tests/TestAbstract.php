@@ -8,7 +8,7 @@ use Xls\Workbook;
  */
 class TestAbstract extends \PHPUnit_Framework_TestCase
 {
-    const WORKBOOK_TS = 1429042916;
+    public const WORKBOOK_TS = 1429042916;
 
     /**
      * @var Workbook

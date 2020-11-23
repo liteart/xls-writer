@@ -5,8 +5,8 @@ use Exception;
 
 class Formula extends AbstractRecord
 {
-    const NAME = 'FORMULA';
-    const ID = 0x0006;
+    public const NAME = 'FORMULA';
+    public const ID = 0x0006;
 
     /**
      * @param $row

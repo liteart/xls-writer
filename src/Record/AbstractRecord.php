@@ -5,7 +5,7 @@ use Xls\Format as XlsFormat;
 
 abstract class AbstractRecord
 {
-    const ID = 0x00;
+    public const ID = 0x00;
 
     /**
      * Returns record header data ready for writing

@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Datemode extends AbstractRecord
 {
-    const NAME = 'DATEMODE';
-    const ID = 0x0022;
+    public const NAME = 'DATEMODE';
+    public const ID = 0x0022;
 
     /**
      * Generate DATEMODE record to indicate the date system in use (1904 or 1900).

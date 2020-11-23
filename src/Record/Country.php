@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Country extends AbstractRecord
 {
-    const NAME = 'COUNTRY';
-    const ID = 0x008C;
+    public const NAME = 'COUNTRY';
+    public const ID = 0x008C;
 
     /**
      * Generate the COUNTRY record for localization

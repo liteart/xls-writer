@@ -5,8 +5,8 @@ use Xls\StringUtils;
 
 class Txo extends AbstractRecord
 {
-    const NAME = 'TXO';
-    const ID = 0x01B6;
+    public const NAME = 'TXO';
+    public const ID = 0x01B6;
 
     /**
      * @param $text

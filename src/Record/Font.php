@@ -5,8 +5,8 @@ use Xls\Font as XlsFont;
 
 class Font extends AbstractRecord
 {
-    const NAME = 'FONT';
-    const ID = 0x0031;
+    public const NAME = 'FONT';
+    public const ID = 0x0031;
 
     /**
      * Generate an Excel BIFF FONT record.

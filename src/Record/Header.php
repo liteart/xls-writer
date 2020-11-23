@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Header extends AbstractRecord
 {
-    const NAME = 'HEADER';
-    const ID = 0x0014;
+    public const NAME = 'HEADER';
+    public const ID = 0x0014;
 
     /**
      * Generate HEADER record

@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Style extends AbstractRecord
 {
-    const NAME = 'STYLE';
-    const ID = 0x0293;
+    public const NAME = 'STYLE';
+    public const ID = 0x0293;
 
     /**
      * Generate the TYLE records

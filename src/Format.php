@@ -6,9 +6,9 @@ use Exception;
 
 class Format
 {
-    const BORDER_NONE = 0;
-    const BORDER_THIN = 1;
-    const BORDER_THICK = 2;
+    public const BORDER_NONE = 0;
+    public const BORDER_THIN = 1;
+    public const BORDER_THICK = 2;
 
     /**
      * The index given by the workbook when creating a new format.

@@ -6,8 +6,8 @@ use Xls\Worksheet;
 
 class PageSetup extends AbstractRecord
 {
-    const NAME = 'PAGESETUP';
-    const ID = 0xA1;
+    public const NAME = 'PAGESETUP';
+    public const ID = 0xA1;
 
     /**
      * @param Worksheet $sheet

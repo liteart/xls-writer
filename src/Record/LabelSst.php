@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class LabelSst extends AbstractRecord
 {
-    const NAME = 'LABELSST';
-    const ID = 0x00FD;
+    public const NAME = 'LABELSST';
+    public const ID = 0x00FD;
 
     /**
      * @param int $row

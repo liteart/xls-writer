@@ -4,16 +4,16 @@ namespace Xls;
 
 class Font
 {
-    const FONT_NORMAL = 400;
-    const FONT_BOLD = 700;
+    public const FONT_NORMAL = 400;
+    public const FONT_BOLD = 700;
 
-    const UNDERLINE_NONE = 0;
-    const UNDERLINE_ONCE = 1;
-    const UNDERLINE_TWICE = 2;
+    public const UNDERLINE_NONE = 0;
+    public const UNDERLINE_ONCE = 1;
+    public const UNDERLINE_TWICE = 2;
 
-    const SCRIPT_NONE = 0;
-    const SCRIPT_SUPER = 1;
-    const SCRIPT_SUB = 2;
+    public const SCRIPT_NONE = 0;
+    public const SCRIPT_SUPER = 1;
+    public const SCRIPT_SUB = 2;
 
     /**
      * Index to the FONT record.

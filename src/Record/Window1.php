@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Window1 extends AbstractRecord
 {
-    const NAME = 'WINDOW1';
-    const ID = 0x003D;
+    public const NAME = 'WINDOW1';
+    public const ID = 0x003D;
 
     /**
      * @param $selectedSheetsCount Number of workbook tabs selected

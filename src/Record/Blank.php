@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Blank extends AbstractRecord
 {
-    const NAME = 'BLANK';
-    const ID = 0x0201;
+    public const NAME = 'BLANK';
+    public const ID = 0x0201;
 
     /**
      * @param $row

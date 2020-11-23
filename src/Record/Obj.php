@@ -6,8 +6,8 @@ use Xls\Utils;
 
 abstract class Obj extends AbstractRecord
 {
-    const NAME = 'OBJ';
-    const ID = 0x005d;
+    public const NAME = 'OBJ';
+    public const ID = 0x005d;
 
     protected function getFtCmoSubrecord($objectId)
     {

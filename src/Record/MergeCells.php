@@ -6,8 +6,8 @@ use Xls\Range;
 
 class MergeCells extends AbstractRecord
 {
-    const NAME = 'MERGECELLS';
-    const ID = 0x00E5;
+    public const NAME = 'MERGECELLS';
+    public const ID = 0x00E5;
 
     /**
      * Generate the MERGECELLS biff record

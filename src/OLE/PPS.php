@@ -4,11 +4,11 @@ namespace Xls\OLE;
 
 class PPS
 {
-    const PPS_TYPE_ROOT = 5;
-    const PPS_TYPE_FILE = 2;
-    const PPS_SIZE = 0x80;
-    const DATA_SIZE_SMALL = 0x1000;
-    const LONG_INT_SIZE = 4;
+    public const PPS_TYPE_ROOT = 5;
+    public const PPS_TYPE_FILE = 2;
+    public const PPS_SIZE = 0x80;
+    public const DATA_SIZE_SMALL = 0x1000;
+    public const LONG_INT_SIZE = 4;
 
     /**
      * The PPS index

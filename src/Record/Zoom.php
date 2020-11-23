@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Zoom extends AbstractRecord
 {
-    const NAME = 'ZOOM';
-    const ID = 0x00A0;
+    public const NAME = 'ZOOM';
+    public const ID = 0x00A0;
 
     /**
      * Store the window zoom factor. This should be a reduced fraction but for

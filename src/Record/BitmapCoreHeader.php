@@ -4,7 +4,7 @@ namespace Xls\Record;
 
 class BitmapCoreHeader extends AbstractRecord
 {
-    const NAME = 'BITMAPCOREHEADER';
+    public const NAME = 'BITMAPCOREHEADER';
 
     /**
      * @param $width

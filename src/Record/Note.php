@@ -5,8 +5,8 @@ use Xls\StringUtils;
 
 class Note extends AbstractRecord
 {
-    const NAME = 'NOTE';
-    const ID = 0x001C;
+    public const NAME = 'NOTE';
+    public const ID = 0x001C;
 
     /**
      * Generate a note associated with the cell given by the row and column.

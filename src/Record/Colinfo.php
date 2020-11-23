@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Colinfo extends AbstractRecord
 {
-    const NAME = 'COLINFO';
-    const ID = 0x7D;
+    public const NAME = 'COLINFO';
+    public const ID = 0x7D;
 
     /**
      * Generate the COLINFO biff record to define column widths

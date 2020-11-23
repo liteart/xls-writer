@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class LeftMargin extends AbstractRecord
 {
-    const NAME = 'LEFTMARGIN';
-    const ID = 0x26;
+    public const NAME = 'LEFTMARGIN';
+    public const ID = 0x26;
 
     /**
      * @param $margin

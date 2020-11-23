@@ -3,8 +3,8 @@ namespace Xls\Record;
 
 class Imdata extends AbstractRecord
 {
-    const NAME = 'IMDATA';
-    const ID = 0x007f;
+    public const NAME = 'IMDATA';
+    public const ID = 0x007f;
 
     /**
      * Generate IMDATA record

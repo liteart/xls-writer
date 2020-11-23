@@ -6,7 +6,7 @@ use Xls\Range;
 
 class HyperlinkExternal extends Hyperlink
 {
-    const MONIKER_GUID = "0303000000000000C000000000000046";
+    public const MONIKER_GUID = "0303000000000000C000000000000046";
 
     /**
      * @param Range $range

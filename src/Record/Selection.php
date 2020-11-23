@@ -6,8 +6,8 @@ use Xls\Range;
 
 class Selection extends AbstractRecord
 {
-    const NAME = 'SELECTION';
-    const ID = 0x001D;
+    public const NAME = 'SELECTION';
+    public const ID = 0x001D;
 
     /**
      * Generate the SELECTION record

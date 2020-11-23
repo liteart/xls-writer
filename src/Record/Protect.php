@@ -4,8 +4,8 @@ namespace Xls\Record;
 
 class Protect extends AbstractRecord
 {
-    const NAME = 'PROTECT';
-    const ID = 0x0012;
+    public const NAME = 'PROTECT';
+    public const ID = 0x0012;
 
     /**
      * Generate the PROTECT biff record

@@ -12,14 +12,14 @@ use Exception;
  */
 class PrintSetup
 {
-    const ORIENTATION_PORTRAIT = 1;
-    const ORIENTATION_LANDSCAPE = 0;
+    public const ORIENTATION_PORTRAIT = 1;
+    public const ORIENTATION_LANDSCAPE = 0;
 
-    const PAPER_CUSTOM = 0;
-    const PAPER_US_LETTER = 1;
-    const PAPER_A3 = 8;
-    const PAPER_A4 = 9;
-    const PAPER_A5 = 11;
+    public const PAPER_CUSTOM = 0;
+    public const PAPER_US_LETTER = 1;
+    public const PAPER_A3 = 8;
+    public const PAPER_A4 = 9;
+    public const PAPER_A5 = 11;
 
     /**
      * The paper size

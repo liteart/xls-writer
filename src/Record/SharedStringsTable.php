@@ -6,8 +6,8 @@ use Xls\SharedStringsTable as SST;
 
 class SharedStringsTable extends AbstractRecord
 {
-    const NAME = 'SST';
-    const ID = 0x00fc;
+    public const NAME = 'SST';
+    public const ID = 0x00fc;
 
     /**
      * Write all of the workbooks strings into an indexed array.

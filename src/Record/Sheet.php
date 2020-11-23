@@ -6,8 +6,8 @@ use Xls\Worksheet;
 
 class Sheet extends AbstractRecord
 {
-    const NAME = 'SHEET';
-    const ID = 0x0085;
+    public const NAME = 'SHEET';
+    public const ID = 0x0085;
 
     /**
      * Generate BOUNDSHEET record.
