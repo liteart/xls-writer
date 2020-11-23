@@ -17,7 +17,7 @@ class HyperlinkExternal extends Hyperlink
     public function getData(Range $range, $url)
     {
         $cellRef = null;
-        if (preg_match("/\#/", $url)) {
+        if (preg_match("/#/", $url)) {
             $parts = explode('#', $url);
             $url = $parts[0];
             $cellRef = $parts[1];
@@ -69,7 +69,7 @@ class HyperlinkExternal extends Hyperlink
         $options |= 1 << 0; //File link or URL
         $options |= $absolute << 1; //File link or URL
 
-        if (preg_match("/\#/", $url)) {
+        if (preg_match("/#/", $url)) {
             $options |= 1 << 3; //Has text mark
         }
 
