@@ -429,12 +429,12 @@ class FormulaParser
 
         // eat up white spaces
         if ($position < $formulaLength) {
-            while ($this->formula{$position} == " ") {
+            while ($this->formula[$position] == " ") {
                 $position++;
             }
 
             if ($position < ($formulaLength - 1)) {
-                $this->lookahead = $this->formula{$position + 1};
+                $this->lookahead = $this->formula[$position + 1];
             }
         }
 

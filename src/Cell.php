@@ -103,7 +103,7 @@ class Cell
         $col = 0;
         $colRefLength = strlen($colRef);
         for ($i = 0; $i < $colRefLength; $i++) {
-            $col += (ord($colRef{$i}) - ord('A') + 1) * pow(26, $expn);
+            $col += (ord($colRef[$i]) - ord('A') + 1) * pow(26, $expn);
             $expn--;
         }
 
