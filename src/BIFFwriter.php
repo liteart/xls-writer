@@ -28,7 +28,7 @@ class BIFFwriter
     /**
      * The size of the data in bytes. Should be the same as strlen($this->data)
      * But this is not true for Worksheet, cause it writes directly to file
-     * @var integer
+     * @var int
      */
     protected $datasize = 0;
 

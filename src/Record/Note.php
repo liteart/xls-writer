@@ -11,9 +11,9 @@ class Note extends AbstractRecord
     /**
      * Generate a note associated with the cell given by the row and column.
      * NOTE records don't have a length limit
-     * @param integer $row
-     * @param integer $col
-     * @param integer $objId
+     * @param int $row
+     * @param int $col
+     * @param int $objId
      *
      * @return string
      */

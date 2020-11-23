@@ -69,7 +69,7 @@ class Token
      * Reference A1 or $A$1
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isReference($token)
     {
@@ -80,7 +80,7 @@ class Token
      * External reference Sheet1!A1 or Sheet1:Sheet2!A1 or 'Sheet1'!A1 or 'Sheet1:Sheet2'!A1
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isExternalReference($token)
     {
@@ -91,7 +91,7 @@ class Token
     /**
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isAnyReference($token)
     {
@@ -101,7 +101,7 @@ class Token
     /**
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isAnyRange($token)
     {
@@ -112,7 +112,7 @@ class Token
      * Range A1:A2 or A1..A2
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isRange($token)
     {
@@ -123,7 +123,7 @@ class Token
      * Range A1:A2 or $A$1:$A$2
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isRangeWithColon($token)
     {
@@ -134,7 +134,7 @@ class Token
      * Range A1..A2 or $A$1..$A$2
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isRangeWithDots($token)
     {
@@ -148,7 +148,7 @@ class Token
      *
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isExternalRange($token)
     {
@@ -169,7 +169,7 @@ class Token
      * String
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isString($token)
     {
@@ -179,7 +179,7 @@ class Token
     /**
      * @param $token
      *
-     * @return boolean
+     * @return bool
      */
     public static function isFunctionCall($token)
     {

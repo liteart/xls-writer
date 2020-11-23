@@ -132,9 +132,9 @@ class Palette
      * string into a number. Color range is 0..63 but we will restrict it
      * to 8..63 to comply with Gnumeric. Colors 0..7 are repeated in 8..15.
      *
-     * @param string|integer $name name of the color (i.e.: 'blue', 'red', etc..). Optional.
+     * @param string|int $name name of the color (i.e.: 'blue', 'red', etc..). Optional.
      *
-     * @return integer The color index
+     * @return int The color index
      */
     public static function getColor($name)
     {

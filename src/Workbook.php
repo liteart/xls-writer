@@ -23,26 +23,26 @@ class Workbook extends BIFFwriter
 
     /**
      * The active worksheet of the workbook (0 indexed)
-     * @var integer
+     * @var int
      */
     protected $activeSheetIndex = 0;
 
     /**
      * 1st displayed worksheet in the workbook (0 indexed)
-     * @var integer
+     * @var int
      */
     protected $firstSheetIndex = 0;
 
     /**
      * Index for creating adding new formats to the workbook
      * 15 style XF's and 1 cell XF
-     * @var integer
+     * @var int
      */
     protected $xfIndex = 16;
 
     /**
      * Flag for preventing close from being called twice.
-     * @var boolean
+     * @var bool
      * @see close()
      */
     protected $saved = false;
@@ -85,7 +85,7 @@ class Workbook extends BIFFwriter
 
     /**
      * The country code used for localization
-     * @var integer
+     * @var int
      */
     protected $countryCode = self::COUNTRY_NONE;
 
@@ -279,7 +279,7 @@ class Workbook extends BIFFwriter
     /**
      * Set the country identifier for the workbook
      *
-     * @param integer $code Is the international calling country code for the
+     * @param int $code Is the international calling country code for the
      *                      chosen country.
      */
     public function setCountry($code)
@@ -427,13 +427,13 @@ class Workbook extends BIFFwriter
     /**
      * Change the RGB components of the elements in the colour palette.
      *
-     * @param integer $index colour index
-     * @param integer $red   red RGB value [0-255]
-     * @param integer $green green RGB value [0-255]
-     * @param integer $blue  blue RGB value [0-255]
-     * @throws \Exception
+     * @param int $index colour index
+     * @param int $red   red RGB value [0-255]
+     * @param int $green green RGB value [0-255]
+     * @param int $blue  blue RGB value [0-255]
+     * @return int The palette index for the custom color
+     *@throws \Exception
      *
-     * @return integer The palette index for the custom color
      */
     public function setCustomColor($index, $red, $green, $blue)
     {

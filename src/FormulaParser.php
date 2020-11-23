@@ -6,7 +6,7 @@ class FormulaParser
 {
     /**
      * The index of the character we are currently looking at
-     * @var integer
+     * @var int
      */
     protected $currentChar = 0;
 
@@ -120,7 +120,7 @@ class FormulaParser
      * args that it takes.
      *
      * @param string $token    The name of the function for convertion to ptg value.
-     * @param integer $numArgs The number of arguments the function receives.
+     * @param int $numArgs The number of arguments the function receives.
      *
      * @return string The packed ptg for the function
      */
@@ -324,7 +324,7 @@ class FormulaParser
      *
      * @param string $sheetName
      *
-     * @return integer The sheet index, -1 if the sheet was not found
+     * @return int The sheet index, -1 if the sheet was not found
      */
     protected function getSheetIndex($sheetName)
     {
@@ -340,9 +340,9 @@ class FormulaParser
      * called by the addWorksheet() method of the
      * Workbook class.
      *
-     * @see Workbook::addWorksheet()
      * @param string $name  The name of the worksheet being added
-     * @param integer $index The index of the worksheet being added
+     * @param int $index The index of the worksheet being added
+     *@see Workbook::addWorksheet()
      */
     public function addSheet($name, $index)
     {

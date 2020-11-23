@@ -8,7 +8,7 @@ class StringUtils
     /**
      * Get whether mbstring extension is available
      *
-     * @return boolean
+     * @return bool
      */
     public static function isMbstringEnabled()
     {
@@ -18,7 +18,7 @@ class StringUtils
     /**
      * Get whether iconv extension is available
      *
-     * @return boolean
+     * @return bool
      */
     public static function isIconvEnabled()
     {

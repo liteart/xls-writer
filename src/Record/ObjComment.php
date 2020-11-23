@@ -7,7 +7,7 @@ class ObjComment extends Obj
     const TYPE = 0x19;
 
     /**
-     * @param integer $objId
+     * @param int $objId
      * @param string $guid comment guid (only for tests)
      *
      * @return string

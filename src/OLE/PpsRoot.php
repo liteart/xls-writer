@@ -20,7 +20,7 @@ class PpsRoot extends PPS
     protected $rootFilePointer;
 
     /**
-     * @param integer $timestamp A timestamp
+     * @param int $timestamp A timestamp
      * @param PpsFile[] $children
      */
     public function __construct(
@@ -44,8 +44,8 @@ class PpsRoot extends PPS
      * Method for saving the whole OLE container (including files).
      *
      * @param string $filename The name of the file where to save the OLE container
-     * @throws \Exception
-     * @return boolean
+     * @return bool
+     *@throws \Exception
      */
     public function save($filename)
     {
@@ -138,7 +138,7 @@ class PpsRoot extends PPS
     /**
      * Saving big data (PPS's with data bigger than OLE_DATA_SIZE_SMALL)
      *
-     * @param integer $iStBlk
+     * @param int $iStBlk
      * @param PPS[] &$list Reference to array of PPS's
      */
     public function saveBigData($iStBlk, &$list)
@@ -253,9 +253,9 @@ class PpsRoot extends PPS
     /**
      * Saving Big Block Depot
      *
-     * @param integer $numSbBlocks - number of Smallblock depot blocks
-     * @param integer $numBbBlocks - number of Bigblock depot blocks
-     * @param integer $numPpsBlocks - number of PropertySetStorage blocks
+     * @param int $numSbBlocks - number of Smallblock depot blocks
+     * @param int $numBbBlocks - number of Bigblock depot blocks
+     * @param int $numPpsBlocks - number of PropertySetStorage blocks
      */
     protected function saveBigBlockChain($numSbBlocks, $numBbBlocks, $numPpsBlocks)
     {
@@ -330,9 +330,9 @@ class PpsRoot extends PPS
     /**
      * Save OLE header
      *
-     * @param integer $numSbBlocks - number of Smallblock depot blocks
-     * @param integer $numBbBlocks - number of Bigblock depot blocks
-     * @param integer $numPpsBlocks - number of PropertySetStorage blocks
+     * @param int $numSbBlocks - number of Smallblock depot blocks
+     * @param int $numBbBlocks - number of Bigblock depot blocks
+     * @param int $numPpsBlocks - number of PropertySetStorage blocks
      */
     public function saveHeader($numSbBlocks, $numBbBlocks, $numPpsBlocks)
     {
@@ -378,9 +378,9 @@ class PpsRoot extends PPS
     /**
      * New method to calculate Bigblock chain
      *
-     * @param integer $numSb - number of Smallblock depot blocks
-     * @param integer $numBb - number of Bigblock depot blocks
-     * @param integer $numPps - number of PropertySetStorage blocks
+     * @param int $numSb - number of Smallblock depot blocks
+     * @param int $numBb - number of Bigblock depot blocks
+     * @param int $numPps - number of PropertySetStorage blocks
      * @return array
      */
     protected function calcBigBlockChain($numSb, $numBb, $numPps)
@@ -438,7 +438,7 @@ class PpsRoot extends PPS
     /**
      * Calculates number of pointer blocks
      *
-     * @param integer $numPointers - number of pointers
+     * @param int $numPointers - number of pointers
      *
      * @return int
      */

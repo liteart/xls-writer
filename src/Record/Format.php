@@ -12,7 +12,7 @@ class Format extends AbstractRecord
      * Generate FORMAT record for non "built-in" numerical formats.
      *
      * @param string $format Custom format string
-     * @param integer $formatIndex   Format index code
+     * @param int $formatIndex   Format index code
      * @return string
      */
     public function getData($format, $formatIndex)

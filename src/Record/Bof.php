@@ -12,7 +12,7 @@ class Bof extends AbstractRecord
      * Generate BOF record to indicate the beginning of a stream or
      * sub-stream in the BIFF file.
      *
-     * @param integer $type Type of BIFF file to write: Workbook or Worksheet.
+     * @param int $type Type of BIFF file to write: Workbook or Worksheet.
      * @return string
      */
     public function getData($type)

@@ -17,7 +17,7 @@ class Font
 
     /**
      * Index to the FONT record.
-     * @var integer
+     * @var int
      */
     public $index = 0;
 
@@ -29,55 +29,55 @@ class Font
 
     /**
      * Height of font (1/20 of a point)
-     * @var integer
+     * @var int
      */
     public $size = 10;
 
     /**
      * Bold style
-     * @var integer
+     * @var int
      */
     public $bold = self::FONT_NORMAL;
 
     /**
      * Bit specifiying if the font is italic.
-     * @var integer
+     * @var int
      */
     public $italic = 0;
 
     /**
      * Index to the cell's color
-     * @var integer
+     * @var int
      */
     public $color = 0x7FFF;
 
     /**
      * The text underline property
-     * @var integer
+     * @var int
      */
     public $underline = self::UNDERLINE_NONE;
 
     /**
      * Bit specifiying if the font has strikeout.
-     * @var integer
+     * @var int
      */
     public $strikeout = 0;
 
     /**
      * Bit specifiying if the font has outline.
-     * @var integer
+     * @var int
      */
     public $outline = 0;
 
     /**
      * Bit specifiying if the font has shadow.
-     * @var integer
+     * @var int
      */
     public $shadow = 0;
 
     /**
      * 2 bytes specifiying the script type for the font.
-     * @var integer
+     * @var int
      */
     public $script = self::SCRIPT_NONE;
 
@@ -97,7 +97,7 @@ class Font
     /**
      * Sets the cell's font color
      *
-     * @param string|integer $color either a string (like 'blue'), or an integer (range is [8...63]).
+     * @param string|int $color either a string (like 'blue'), or an integer (range is [8...63]).
      *
      * @return Font
      */
@@ -111,7 +111,7 @@ class Font
     /**
      * Sets the underline of the text
      *
-     * @param integer $underline The value for underline. Possible values are:
+     * @param int $underline The value for underline. Possible values are:
      * UNDERLINE_ONCE => underline, UNDERLINE_TWICE => double underline.
      *
      * @return Font
@@ -139,7 +139,7 @@ class Font
     /**
      * Sets the font size
      *
-     * @param integer $size The font size (in pixels I think).
+     * @param int $size The font size (in pixels I think).
      *
      * @return Font
      */

@@ -7,8 +7,8 @@ class Number extends AbstractRecord
     const ID = 0x0203;
 
     /**
-     * @param integer $row
-     * @param integer $col
+     * @param int $row
+     * @param int $col
      * @param float $num
      * @param null $format
      *

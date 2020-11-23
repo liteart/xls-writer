@@ -13,7 +13,7 @@ class Selection extends AbstractRecord
      * Generate the SELECTION record
      *
      * @param Range $selection
-     * @param integer $activePane pane position
+     * @param int $activePane pane position
      * @return string
      */
     public function getData($selection, $activePane)

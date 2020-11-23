@@ -7,9 +7,9 @@ class LabelSst extends AbstractRecord
     const ID = 0x00FD;
 
     /**
-     * @param integer $row
-     * @param integer $col
-     * @param integer $strIdx
+     * @param int $row
+     * @param int $col
+     * @param int $strIdx
      * @param null $format
      *
      * @return string

@@ -48,7 +48,7 @@ class SharedStringsTable
     /**
      * Add string to table. Returns string index
      * @param $str
-     * @return integer
+     * @return int
      */
     public function add($str)
     {

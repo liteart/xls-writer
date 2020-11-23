@@ -60,7 +60,7 @@ class Range
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getColFrom()
     {
@@ -68,7 +68,7 @@ class Range
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getColTo()
     {
@@ -76,7 +76,7 @@ class Range
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getRowFrom()
     {
@@ -84,7 +84,7 @@ class Range
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getRowTo()
     {

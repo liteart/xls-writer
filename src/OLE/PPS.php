@@ -12,7 +12,7 @@ class PPS
 
     /**
      * The PPS index
-     * @var integer
+     * @var int
      */
     protected $index;
 
@@ -24,37 +24,37 @@ class PPS
 
     /**
      * The PPS type. Dir, Root or File
-     * @var integer
+     * @var int
      */
     protected $type;
 
     /**
      * The index of the previous PPS
-     * @var integer
+     * @var int
      */
     protected $prevPps;
 
     /**
      * The index of the next PPS
-     * @var integer
+     * @var int
      */
     protected $nextPps;
 
     /**
      * The index of it's first child if this is a Dir or Root PPS
-     * @var integer
+     * @var int
      */
     protected $dirPps;
 
     /**
      * A timestamp
-     * @var integer
+     * @var int
      */
     protected $timestamp;
 
     /**
      * Starting block (small or big) for this PPS's data  inside the container
-     * @var integer
+     * @var int
      */
     protected $startBlock;
 
@@ -73,13 +73,13 @@ class PPS
     /**
      * The constructor
      *
-     * @param integer $index The PPS index
+     * @param int $index The PPS index
      * @param string $name The PPS name
-     * @param integer $type The PPS type. Dir, Root or File
-     * @param integer $prev The index of the previous PPS
-     * @param integer $next The index of the next PPS
-     * @param integer $dir  The index of it's first child if this is a Dir or Root PPS
-     * @param integer $timestamp A timestamp
+     * @param int $type The PPS type. Dir, Root or File
+     * @param int $prev The index of the previous PPS
+     * @param int $next The index of the next PPS
+     * @param int $dir  The index of it's first child if this is a Dir or Root PPS
+     * @param int $timestamp A timestamp
      * @param string $data  The (usually binary) source data of the PPS
      * @param PPS[] $children Array containing children PPS for this PPS
      */
@@ -128,7 +128,7 @@ class PPS
     /**
      * Returns the amount of data saved for this PPS
      *
-     * @return integer The amount of data (in bytes)
+     * @return int The amount of data (in bytes)
      */
     protected function getSize()
     {
@@ -178,7 +178,7 @@ class PPS
      * @param PPS[] $toSave
      * @param $depth
      *
-     * @return integer The index for this PPS
+     * @return int The index for this PPS
      */
     public static function setPointers(&$list, $toSave, $depth = 0)
     {

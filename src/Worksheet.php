@@ -20,7 +20,7 @@ class Worksheet extends BIFFwriter
 
     /**
      * Index for the Worksheet
-     * @var integer
+     * @var int
      */
     protected $index;
 
@@ -67,25 +67,25 @@ class Worksheet extends BIFFwriter
 
     /**
      * The active pane for the worksheet
-     * @var integer
+     * @var int
      */
     protected $activePane = 3;
 
     /**
      * Bit specifying if panes are frozen
-     * @var integer
+     * @var int
      */
     protected $frozen = 0;
 
     /**
      * Bit specifying if the worksheet is selected
-     * @var integer
+     * @var int
      */
     protected $selected = 0;
 
     /**
      * Whether to display RightToLeft.
-     * @var integer
+     * @var int
      */
     protected $rtl = 0;
 
@@ -115,7 +115,7 @@ class Worksheet extends BIFFwriter
 
     /**
      * Outline row level.
-     * @var integer
+     * @var int
      */
     protected $outlineRowLevel = 0;
 
@@ -164,7 +164,7 @@ class Worksheet extends BIFFwriter
      * Constructor
      *
      * @param string $name         The name of the new worksheet
-     * @param integer $index        The index of the new worksheet
+     * @param int $index        The index of the new worksheet
      * @param Workbook $workbook Parent workbook
      * @param SharedStringsTable $sst Workbook's shared strings table
      * @param Format $urlFormat  The default format for hyperlinks
@@ -306,8 +306,8 @@ class Worksheet extends BIFFwriter
     /**
      * Set the width of a single column
      *
-     * @param integer $col Column index
-     * @param integer $width    width to set
+     * @param int $col Column index
+     * @param int $width    width to set
      * @param mixed $format   The optional XF format to apply to the columns
      */
     public function setColumnWidth($col, $width, $format = null)
@@ -324,8 +324,8 @@ class Worksheet extends BIFFwriter
 
     /**
      * This method is used to set the height and format for a row.
-     * @param integer $row    The row to set
-     * @param integer $height Height we are giving to the row.
+     * @param int $row    The row to set
+     * @param int $height Height we are giving to the row.
      *                        Use null to set XF without setting height
      * @param mixed $format XF format we are giving to the row
      */
@@ -343,10 +343,10 @@ class Worksheet extends BIFFwriter
     /**
      * Set which cell or cells are selected in a worksheet
      *
-     * @param integer $firstRow    first row in the selected quadrant
-     * @param integer $firstColumn first column in the selected quadrant
-     * @param integer $lastRow     last row in the selected quadrant
-     * @param integer $lastColumn  last column in the selected quadrant
+     * @param int $firstRow    first row in the selected quadrant
+     * @param int $firstColumn first column in the selected quadrant
+     * @param int $lastRow     last row in the selected quadrant
+     * @param int $lastColumn  last column in the selected quadrant
      */
     public function setSelection($firstRow, $firstColumn, $lastRow = null, $lastColumn = null)
     {
@@ -462,8 +462,8 @@ class Worksheet extends BIFFwriter
     /**
      * Write value to cell
      *
-     * @param integer $row    The row of the cell we are writing to
-     * @param integer $col    The column of the cell we are writing to
+     * @param int $row    The row of the cell we are writing to
+     * @param int $col    The column of the cell we are writing to
      * @param mixed $value What we are writing
      * @param mixed $format The optional format to apply to the cell
      *
@@ -515,8 +515,8 @@ class Worksheet extends BIFFwriter
 
     /**
      * Write an array of values as a row
-     * @param integer $row    The row we are writing to
-     * @param integer $col    The first col (leftmost col) we are writing to
+     * @param int $row    The row we are writing to
+     * @param int $col    The first col (leftmost col) we are writing to
      * @param array $val    The array of values to write
      * @param mixed $format The optional format to apply to the cell
      * @throws \Exception
@@ -539,8 +539,8 @@ class Worksheet extends BIFFwriter
 
     /**
      * Write an array of values as a column
-     * @param integer $row    The first row (uppermost row) we are writing to
-     * @param integer $col    The col we are writing to
+     * @param int $row    The first row (uppermost row) we are writing to
+     * @param int $col    The col we are writing to
      * @param array $val    The array of values to write
      * @param mixed $format The optional format to apply to the cell
      * @throws \Exception
@@ -593,8 +593,8 @@ class Worksheet extends BIFFwriter
      * An integer can be written as a double. Excel will display an
      * integer. $format is optional.
      *
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @param float $num    The number to write
      * @param mixed $format The optional XF format
      */
@@ -609,8 +609,8 @@ class Worksheet extends BIFFwriter
      * Write a string to the specified row and column (zero indexed).
      * NOTE: there is an Excel 5 defined limit of 255 characters.
      * $format is optional.
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @param string $str    The string to write
      * @param mixed $format The XF format for the cell
      */
@@ -628,8 +628,8 @@ class Worksheet extends BIFFwriter
 
     /**
      * Write a string to the specified row and column (zero indexed).
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @param string $str    The string to write
      * @param mixed $format The XF format for the cell
      */
@@ -651,8 +651,8 @@ class Worksheet extends BIFFwriter
     /**
      * Check row and col before writing to a cell, and update the sheet's
      * dimensions accordingly
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @return Cell
      */
     protected function addCell($row, $col)
@@ -667,8 +667,8 @@ class Worksheet extends BIFFwriter
     /**
      * Writes a note associated with the cell given by the row and column.
      * NOTE records don't have a length limit.
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @param string $note   The note to write
      * @param string $guid comment guid (only for tests)
      */
@@ -702,8 +702,8 @@ class Worksheet extends BIFFwriter
      * A blank cell without a format serves no purpose. Therefore, we don't write
      * a BLANK record unless a format is specified.
      *
-     * @param integer $row    Zero indexed row
-     * @param integer $col    Zero indexed column
+     * @param int $row    Zero indexed row
+     * @param int $col    Zero indexed column
      * @param mixed $format The XF format
      * @throws \Exception
      */
@@ -724,8 +724,8 @@ class Worksheet extends BIFFwriter
      * The textual representation of the formula is passed to the formula parser
      * which returns a packed binary string.
      *
-     * @param integer $row     Zero indexed row
-     * @param integer $col     Zero indexed column
+     * @param int $row     Zero indexed row
+     * @param int $col     Zero indexed column
      * @param string $formula The formula text string
      * @param mixed $format  The optional XF format
      * @throws \Exception
@@ -757,8 +757,8 @@ class Worksheet extends BIFFwriter
      * The hyperlink can be to a http, ftp, mail, internal sheet (not yet), or external
      * directory url.
      *
-     * @param integer $row    Row
-     * @param integer $col    Column
+     * @param int $row    Row
+     * @param int $col    Column
      * @param string $url    URL string
      * @param string $label Alternative label
      * @param mixed $format The cell format
@@ -925,10 +925,10 @@ class Worksheet extends BIFFwriter
 
     /**
      * Merges the area given by its arguments.
-     * @param integer $firstRow First row of the area to merge
-     * @param integer $firstCol First column of the area to merge
-     * @param integer $lastRow  Last row of the area to merge
-     * @param integer $lastCol  Last column of the area to merge
+     * @param int $firstRow First row of the area to merge
+     * @param int $firstCol First column of the area to merge
+     * @param int $lastRow  Last row of the area to merge
+     * @param int $lastCol  Last column of the area to merge
      */
     public function mergeCells($firstRow, $firstCol, $lastRow, $lastCol)
     {
@@ -993,13 +993,13 @@ class Worksheet extends BIFFwriter
     /**
      * Insert a 24bit bitmap image in a worksheet.
      *
-     * @param integer $row     The row we are going to insert the bitmap into
-     * @param integer $col     The column we are going to insert the bitmap into
+     * @param int $row     The row we are going to insert the bitmap into
+     * @param int $col     The column we are going to insert the bitmap into
      * @param string $path  The bitmap filename
-     * @param integer $x       The horizontal position (offset) of the image inside the cell.
-     * @param integer $y       The vertical position (offset) of the image inside the cell.
-     * @param integer $scaleX The horizontal scale
-     * @param integer $scaleY The vertical scale
+     * @param int $x       The horizontal position (offset) of the image inside the cell.
+     * @param int $y       The vertical position (offset) of the image inside the cell.
+     * @param int $scaleX The horizontal scale
+     * @param int $scaleY The vertical scale
      */
     public function insertBitmap($row, $col, $path, $x = 0, $y = 0, $scaleX = 1, $scaleY = 1)
     {
@@ -1066,12 +1066,12 @@ class Worksheet extends BIFFwriter
      * @note  the SDK incorrectly states that the height should be expressed as a
      *        percentage of 1024.
      *
-     * @param integer $colStart Col containing upper left corner of object
-     * @param integer $rowStart Row containing top left corner of object
-     * @param integer $x1        Distance to left side of object
-     * @param integer $y1        Distance to top of object
-     * @param integer $width     Width of image frame
-     * @param integer $height    Height of image frame
+     * @param int $colStart Col containing upper left corner of object
+     * @param int $rowStart Row containing top left corner of object
+     * @param int $x1        Distance to left side of object
+     * @param int $y1        Distance to top of object
+     * @param int $width     Width of image frame
+     * @param int $height    Height of image frame
      * @throws \Exception
      */
     protected function positionImage($colStart, $rowStart, $x1, $y1, $width, $height)
@@ -1139,8 +1139,8 @@ class Worksheet extends BIFFwriter
      * use the default value. If the col is hidden we use a value of zero.
      *
      *
-     * @param integer $col The column
-     * @return integer The width in pixels
+     * @param int $col The column
+     * @return int The width in pixels
      */
     protected function getColWidth($col)
     {
@@ -1164,8 +1164,8 @@ class Worksheet extends BIFFwriter
      * possible to hide row yet).
      *
      *
-     * @param integer $row The row
-     * @return integer The width in pixels
+     * @param int $row The row
+     * @return int The width in pixels
      */
     protected function getRowHeight($row)
     {
@@ -1259,7 +1259,7 @@ class Worksheet extends BIFFwriter
     }
 
     /**
-     * @return integer
+     * @return int
      */
     protected function getNewObjectId()
     {
@@ -1285,7 +1285,7 @@ class Worksheet extends BIFFwriter
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getOutlineStyle()
     {
@@ -1293,7 +1293,7 @@ class Worksheet extends BIFFwriter
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getOutlineBelow()
     {
@@ -1301,7 +1301,7 @@ class Worksheet extends BIFFwriter
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getOutlineRight()
     {
@@ -1333,10 +1333,10 @@ class Worksheet extends BIFFwriter
     /**
      * Set the worksheet zoom factor.
      *
-     * @param integer $percents The zoom factor
+     * @param int $percents The zoom factor
      *
-     * @throws \Exception
      * @return Worksheet
+     *@throws \Exception
      */
     public function setZoom($percents = 100)
     {

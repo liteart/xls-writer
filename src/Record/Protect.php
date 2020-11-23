@@ -10,7 +10,7 @@ class Protect extends AbstractRecord
     /**
      * Generate the PROTECT biff record
      *
-     * @param integer $lock
+     * @param int $lock
      *
      * @return string
      */

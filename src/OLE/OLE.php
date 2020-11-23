@@ -24,7 +24,7 @@ class OLE
     /**
      * Returns a string for the OLE container with the date given
      *
-     * @param integer $date A timestamp
+     * @param int $date A timestamp
      *
      * @return string The string for the OLE container
      */

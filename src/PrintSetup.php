@@ -22,14 +22,14 @@ class PrintSetup
     /**
      * The paper size
      *
-     * @var integer
+     * @var int
      */
     protected $paperSize = self::PAPER_CUSTOM;
 
     /**
      * Bit specifying paper orientation (for printing). 0 => landscape, 1 => portrait
      *
-     * @var integer
+     * @var int
      */
     protected $orientation = self::ORIENTATION_PORTRAIT;
 
@@ -58,14 +58,14 @@ class PrintSetup
     /**
      * Number of pages to fit wide
      *
-     * @var integer
+     * @var int
      */
     protected $fitWidth = 0;
 
     /**
      * Number of pages to fit high
      *
-     * @var integer
+     * @var int
      */
     protected $fitHeight = 0;
 
@@ -137,10 +137,10 @@ class PrintSetup
     /**
      * Set the area of each worksheet that will be printed.
      *
-     * @param integer $firstRow First row of the area to print
-     * @param integer $firstCol First column of the area to print
-     * @param integer $lastRow  Last row of the area to print
-     * @param integer $lastCol  Last column of the area to print
+     * @param int $firstRow First row of the area to print
+     * @param int $firstCol First column of the area to print
+     * @param int $lastRow  Last row of the area to print
+     * @param int $lastCol  Last column of the area to print
      *
      * @return PrintSetup
      */
@@ -154,8 +154,8 @@ class PrintSetup
     /**
      * Set the rows to repeat at the top of each printed page.
      *
-     * @param integer $firstRow First row to repeat
-     * @param integer $lastRow  Last row to repeat. Optional.
+     * @param int $firstRow First row to repeat
+     * @param int $lastRow  Last row to repeat. Optional.
      *
      * @return PrintSetup
      */
@@ -183,8 +183,8 @@ class PrintSetup
     /**
      * Set the columns to repeat at the left hand side of each printed page.
      *
-     * @param integer $firstCol First column to repeat
-     * @param integer $lastCol  Last column to repeat. Optional.
+     * @param int $firstCol First column to repeat
+     * @param int $lastCol  Last column to repeat. Optional.
      *
      * @return PrintSetup
      */
@@ -221,10 +221,10 @@ class PrintSetup
      * Set the scale factor for the printed page.
      * It turns off the "fit to page" option
      *
-     * @param integer $scale The optional scale factor. Defaults to 100
+     * @param int $scale The optional scale factor. Defaults to 100
      *
-     * @throws \Exception
      * @return PrintSetup
+     *@throws \Exception
      */
     public function setPrintScale($scale = 100)
     {
@@ -252,7 +252,7 @@ class PrintSetup
     /**
      * Set the paper type
      *
-     * @param integer $size The type of paper size to use
+     * @param int $size The type of paper size to use
      *
      * @return PrintSetup
      */
@@ -320,7 +320,7 @@ class PrintSetup
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isFitPage()
     {
@@ -331,8 +331,8 @@ class PrintSetup
      * Set the vertical and horizontal number of pages that will define the maximum area printed.
      * It doesn't seem to work with OpenOffice.
      *
-     * @param  integer $width  Maximun width of printed area in pages
-     * @param  integer $height Maximun heigth of printed area in pages
+     * @param int $width  Maximun width of printed area in pages
+     * @param int $height Maximun heigth of printed area in pages
      *
      * @return PrintSetup
      */

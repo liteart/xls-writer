@@ -10,73 +10,73 @@ class Format
 
     /**
      * The index given by the workbook when creating a new format.
-     * @var integer
+     * @var int
      */
     public $xfIndex;
 
     /**
      * An index (2 bytes) to a FORMAT record (number format).
-     * @var integer
+     * @var int
      */
     protected $numFormat = NumberFormat::TYPE_GENERAL;
 
     /**
      * number format index
-     * @var integer
+     * @var int
      */
     protected $numFormatIndex;
 
     /**
      * Bit specifying if formulas are hidden.
-     * @var integer
+     * @var int
      */
     public $hidden = 0;
 
     /**
      * Bit specifying if the cell is locked.
-     * @var integer
+     * @var int
      */
     public $locked = 0;
 
     /**
      * The three bits specifying the text horizontal alignment.
-     * @var integer
+     * @var int
      */
     public $textHorAlign = 0;
 
     /**
      * Bit specifying if the text is wrapped at the right border.
-     * @var integer
+     * @var int
      */
     public $textWrap = 0;
 
     /**
      * The three bits specifying the text vertical alignment.
-     * @var integer
+     * @var int
      */
     public $textVertAlign;
 
     /**
      * The two bits specifying the text rotation.
-     * @var integer
+     * @var int
      */
     public $rotation = 0;
 
     /**
      * The cell's foreground color.
-     * @var integer
+     * @var int
      */
     public $fgColor = 0x40;
 
     /**
      * The cell's background color.
-     * @var integer
+     * @var int
      */
     public $bgColor = 0x41;
 
     /**
      * The cell's background fill pattern.
-     * @var integer
+     * @var int
      */
     public $pattern = 0;
 
@@ -138,7 +138,7 @@ class Format
     protected $font;
 
     /**
-     * @param integer $index the XF index for the format.
+     * @param int $index the XF index for the format.
      * @param array $properties array with properties to be set on initialization.
      */
     public function __construct($index = 0, $properties = array())
@@ -218,7 +218,7 @@ class Format
     /**
      * Returns the index used by Worksheet::xf()
      *
-     * @return integer The index for the XF record
+     * @return int The index for the XF record
      */
     public function getXfIndex()
     {
@@ -265,8 +265,8 @@ class Format
     /**
      * Sets the style for the bottom border of the cell
      *
-     * @param integer $style style of the cell border (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style of the cell border (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     public function setBorderBottom($style, $color = 0x40)
@@ -277,8 +277,8 @@ class Format
     /**
      * Sets the style for the top border of the cell
      *
-     * @param integer $style style of the cell top border (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style of the cell top border (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     public function setBorderTop($style, $color = 0x40)
@@ -289,8 +289,8 @@ class Format
     /**
      * Sets the style for the left border of the cell
      *
-     * @param integer $style style of the cell left border (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style of the cell left border (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     public function setBorderLeft($style, $color = 0x40)
@@ -301,8 +301,8 @@ class Format
     /**
      * Sets the style for the right border of the cell
      *
-     * @param integer $style style of the cell right border (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style of the cell right border (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     public function setBorderRight($style, $color = 0x40)
@@ -313,8 +313,8 @@ class Format
     /**
      * Set cells borders to the same style
      *
-     * @param integer $style style to apply for all cell borders (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style to apply for all cell borders (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     public function setBorder($style, $color = 0x40)
@@ -328,8 +328,8 @@ class Format
     /**
      * Sets the style for the bottom border of the cell
      * @param string $side
-     * @param integer $style style of the cell border (BORDER_THIN or BORDER_THICK).
-     * @param string|integer $color The color we are setting. Either a string (like 'blue'),
+     * @param int $style style of the cell border (BORDER_THIN or BORDER_THICK).
+     * @param string|int $color The color we are setting. Either a string (like 'blue'),
      *                     or an integer (range is [8...63]).
      */
     protected function setBorderInternal($side, $style, $color = 0x40)
@@ -344,7 +344,7 @@ class Format
     /**
      * @param $side
      *
-     * @return integer|null
+     * @return int|null
      */
     public function getBorderStyle($side)
     {
@@ -354,7 +354,7 @@ class Format
     /**
      * @param $side
      *
-     * @return integer|null
+     * @return int|null
      */
     public function getBorderColor($side)
     {
@@ -364,7 +364,7 @@ class Format
     /**
      * Sets the cell's foreground color
      *
-     * @param string|integer $color either a string (like 'blue'), or an integer (range is [8...63]).
+     * @param string|int $color either a string (like 'blue'), or an integer (range is [8...63]).
      */
     public function setFgColor($color)
     {
@@ -377,7 +377,7 @@ class Format
     /**
      * Sets the cell's background color
      *
-     * @param string|integer $color either a string (like 'blue'), or an integer (range is [8...63]).
+     * @param string|int $color either a string (like 'blue'), or an integer (range is [8...63]).
      */
     public function setBgColor($color)
     {
@@ -390,7 +390,7 @@ class Format
     /**
      * Sets the fill pattern attribute of a cell
      *
-     * @param integer $pattern Optional. Defaults to 1. Meaningful values are: 0-18,
+     * @param int $pattern Optional. Defaults to 1. Meaningful values are: 0-18,
      *                     0 meaning no background.
      */
     public function setPattern($pattern = Fill::PATTERN_SOLID)
@@ -410,7 +410,7 @@ class Format
     /**
      * Sets the orientation of the text
      *
-     * @param integer $angle The rotation angle for the text (clockwise). Possible
+     * @param int $angle The rotation angle for the text (clockwise). Possible
      * values are: 0, 90, 270 and -1 for stacking top-to-bottom.
      * @throws \Exception
      */
@@ -455,7 +455,7 @@ class Format
      * Sets the numeric format.
      * It can be date, time, currency, etc...
      *
-     * @param integer $numFormat The numeric format.
+     * @param int $numFormat The numeric format.
      */
     public function setNumFormat($numFormat)
     {

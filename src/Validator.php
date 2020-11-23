@@ -172,7 +172,7 @@ class Validator
     }
 
     /**
-     * @param boolean $showDropDown
+     * @param bool $showDropDown
      */
     public function setShowDropDown($showDropDown = true)
     {

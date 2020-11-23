@@ -13,7 +13,7 @@ class ObjPicture extends Obj
      * Generate the OBJ record that precedes an IMDATA record. This could be generalise
      * to support other Excel objects.
      *
-     * @param integer $objectId
+     * @param int $objectId
      * @param Range $area Picture position area
      * @param Margin $margin  Margins from cell sides
      * @return string

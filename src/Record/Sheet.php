@@ -13,7 +13,7 @@ class Sheet extends AbstractRecord
      * Generate BOUNDSHEET record.
      *
      * @param string $sheetName Worksheet name
-     * @param integer $offset Location of worksheet BOF
+     * @param int $offset Location of worksheet BOF
      * @return string
      */
     public function getData($sheetName, $offset = 0)
