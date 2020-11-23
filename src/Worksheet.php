@@ -464,11 +464,12 @@ class Worksheet extends BIFFwriter
     /**
      * Write value to cell
      *
-     * @param int $row    The row of the cell we are writing to
-     * @param int $col    The column of the cell we are writing to
+     * @param int $row The row of the cell we are writing to
+     * @param int $col The column of the cell we are writing to
      * @param mixed $value What we are writing
      * @param mixed $format The optional format to apply to the cell
      *
+     * @throws Exception
      */
     public function write($row, $col, $value, $format = null)
     {
@@ -611,10 +612,11 @@ class Worksheet extends BIFFwriter
      * Write a string to the specified row and column (zero indexed).
      * NOTE: there is an Excel 5 defined limit of 255 characters.
      * $format is optional.
-     * @param int $row    Zero indexed row
-     * @param int $col    Zero indexed column
-     * @param string $str    The string to write
+     * @param int $row Zero indexed row
+     * @param int $col Zero indexed column
+     * @param string $str The string to write
      * @param mixed $format The XF format for the cell
+     * @throws Exception
      */
     public function writeString($row, $col, $str, $format = null)
     {
@@ -653,9 +655,10 @@ class Worksheet extends BIFFwriter
     /**
      * Check row and col before writing to a cell, and update the sheet's
      * dimensions accordingly
-     * @param int $row    Zero indexed row
-     * @param int $col    Zero indexed column
+     * @param int $row Zero indexed row
+     * @param int $col Zero indexed column
      * @return Cell
+     * @throws Exception
      */
     protected function addCell($row, $col)
     {
@@ -995,13 +998,14 @@ class Worksheet extends BIFFwriter
     /**
      * Insert a 24bit bitmap image in a worksheet.
      *
-     * @param int $row     The row we are going to insert the bitmap into
-     * @param int $col     The column we are going to insert the bitmap into
-     * @param string $path  The bitmap filename
-     * @param int $x       The horizontal position (offset) of the image inside the cell.
-     * @param int $y       The vertical position (offset) of the image inside the cell.
+     * @param int $row The row we are going to insert the bitmap into
+     * @param int $col The column we are going to insert the bitmap into
+     * @param string $path The bitmap filename
+     * @param int $x The horizontal position (offset) of the image inside the cell.
+     * @param int $y The vertical position (offset) of the image inside the cell.
      * @param int $scaleX The horizontal scale
      * @param int $scaleY The vertical scale
+     * @throws Exception
      */
     public function insertBitmap($row, $col, $path, $x = 0, $y = 0, $scaleX = 1, $scaleY = 1)
     {

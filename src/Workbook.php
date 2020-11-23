@@ -449,6 +449,7 @@ class Workbook extends BIFFwriter
     /**
      * Store the workbook in an OLE container
      * @param string $filePath
+     * @throws Exception
      */
     protected function saveOleFile($filePath)
     {

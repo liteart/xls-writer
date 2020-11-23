@@ -47,6 +47,7 @@ class Functions
      * @param $function
      *
      * @return mixed
+     * @throws Exception
      */
     public static function getPtg($function)
     {

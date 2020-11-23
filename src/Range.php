@@ -111,6 +111,7 @@ class Range
 
     /**
      * @return Cell
+     * @throws \Exception
      */
     public function getStartCell()
     {

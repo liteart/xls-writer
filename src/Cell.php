@@ -34,6 +34,7 @@ class Cell
      * @param $address
      *
      * @return Cell
+     * @throws Exception
      */
     public static function createFromAddress($address)
     {

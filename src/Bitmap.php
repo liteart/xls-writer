@@ -24,6 +24,7 @@ class Bitmap
 
     /**
      * @param string $filePath
+     * @throws Exception
      */
     public function __construct($filePath)
     {

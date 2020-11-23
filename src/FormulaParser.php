@@ -121,10 +121,11 @@ class FormulaParser
      * Convert a function to a ptgFunc or ptgFuncVarV depending on the number of
      * args that it takes.
      *
-     * @param string $token    The name of the function for convertion to ptg value.
+     * @param string $token The name of the function for convertion to ptg value.
      * @param int $numArgs The number of arguments the function receives.
      *
      * @return string The packed ptg for the function
+     * @throws Exception
      */
     protected function convertFunction($token, $numArgs)
     {
@@ -145,6 +146,8 @@ class FormulaParser
      *
      * @param string $range An Excel range in the A1:A2 or A1..A2 format.
      * @return string
+     * @throws Exception
+     * @throws Exception
      */
     protected function convertRange2d($range)
     {
@@ -166,6 +169,9 @@ class FormulaParser
      *
      * @param string $token An Excel range in the Sheet1!A1:A2 format.
      * @return string The packed ptgArea3d token
+     * @throws Exception
+     * @throws Exception
+     * @throws Exception
      */
     protected function convertRange3d($token)
     {
@@ -192,6 +198,7 @@ class FormulaParser
      *
      * @param string $cell An Excel cell reference
      * @return string The cell in packed() format with the corresponding ptg
+     * @throws Exception
      */
     protected function convertRef2d($cell)
     {
@@ -208,6 +215,8 @@ class FormulaParser
      *
      * @param string $cell An Excel cell reference
      * @return string The packed ptgRef3d token
+     * @throws Exception
+     * @throws Exception
      */
     protected function convertRef3d($cell)
     {
@@ -639,6 +648,8 @@ class FormulaParser
      * Term -> Fact [("*" | "/") Fact]
      *
      * @return array The parsed ptg'd tree
+     * @throws Exception
+     * @throws Exception
      */
     protected function term()
     {
@@ -795,6 +806,10 @@ class FormulaParser
      *
      * @param array $tree The optional tree to convert.
      * @return string The tree in reverse polish notation
+     * @throws Exception
+     * @throws Exception
+     * @throws Exception
+     * @throws Exception
      */
     protected function toReversePolish($tree)
     {
