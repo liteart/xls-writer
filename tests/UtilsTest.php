@@ -1,6 +1,7 @@
 <?php
 namespace Test;
 
+use Exception;
 use Xls\Cell;
 use Xls\Utils;
 
@@ -15,7 +16,7 @@ class UtilsTest extends TestAbstract
      * @param $row
      * @param $col
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function testRowColToCell($expected, $row, $col)
     {
@@ -72,7 +73,7 @@ class UtilsTest extends TestAbstract
      * @param string $expected
      * @param int $value
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function testHexDump($expected, $value)
     {

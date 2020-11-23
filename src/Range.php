@@ -2,6 +2,8 @@
 
 namespace Xls;
 
+use Exception;
+
 class Range
 {
     protected $colFrom;
@@ -111,7 +113,7 @@ class Range
 
     /**
      * @return Cell
-     * @throws \Exception
+     * @throws Exception
      */
     public function getStartCell()
     {

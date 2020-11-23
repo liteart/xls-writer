@@ -1,12 +1,13 @@
 <?php
 namespace Test;
 
+use PHPUnit_Framework_TestCase;
 use Xls\Workbook;
 
 /**
  *
  */
-class WorkbookTest extends \PHPUnit_Framework_TestCase
+class WorkbookTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Workbook

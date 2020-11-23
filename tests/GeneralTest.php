@@ -1,6 +1,7 @@
 <?php
 namespace Test;
 
+use Exception;
 use Xls\Fill;
 use Xls\Workbook;
 
@@ -67,7 +68,7 @@ class GeneralTest extends TestAbstract
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function testProtected()
     {

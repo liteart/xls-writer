@@ -1,12 +1,13 @@
 <?php
 namespace Test;
 
+use PHPUnit_Framework_TestCase;
 use Xls\Workbook;
 
 /**
  *
  */
-class TestAbstract extends \PHPUnit_Framework_TestCase
+class TestAbstract extends PHPUnit_Framework_TestCase
 {
     public const WORKBOOK_TS = 1429042916;
 

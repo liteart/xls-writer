@@ -1,6 +1,7 @@
 <?php
 namespace Test;
 
+use Exception;
 use Xls\Format;
 use Xls\NumberFormat;
 use Xls\Fill;
@@ -12,7 +13,7 @@ use Xls\Font;
 class RichTest extends TestAbstract
 {
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function testRich()
     {
@@ -159,7 +160,7 @@ class RichTest extends TestAbstract
 
     /**
      * @return Format
-     * @throws \Exception
+     * @throws Exception
      */
     protected function getOldPriceFormat()
     {

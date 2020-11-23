@@ -1,6 +1,8 @@
 <?php
 namespace Test;
 
+use Exception;
+use PHPUnit_Framework_TestCase;
 use Xls\Biff8;
 use Xls\FormulaParser;
 use Xls\Token;
@@ -9,7 +11,7 @@ use Xls\BIFFwriter;
 /**
  *
  */
-class FormulaParserTest extends \PHPUnit_Framework_TestCase
+class FormulaParserTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var FormulaParser
@@ -183,7 +185,7 @@ class FormulaParserTest extends \PHPUnit_Framework_TestCase
      * @param string $expected
      * @param string $value
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function testTokenIsExternalRange($expected, $value)
     {
@@ -211,7 +213,7 @@ class FormulaParserTest extends \PHPUnit_Framework_TestCase
      * @param string $expected
      * @param string $value
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function testTokenGetPtg($expected, $value)
     {
@@ -235,7 +237,7 @@ class FormulaParserTest extends \PHPUnit_Framework_TestCase
      * @param string $token
      * @param string $lookahead
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function testTokenPossibleLookahead($expected, $token, $lookahead)
     {
