@@ -15,7 +15,7 @@ class OLE
         $rawname = '';
         $len = strlen($ascii);
         for ($i = 0; $i < $len; $i++) {
-            $rawname .= $ascii{$i} . "\x00";
+            $rawname .= $ascii[$i] . "\x00";
         }
 
         return $rawname;
