@@ -14,7 +14,7 @@
         "php": ">=7.4"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "0.2.0"
+        "satooshi/php-coveralls": "*"
     },
     "autoload": {
         "psr-4": {
